@@ -12,5 +12,10 @@
 # misc
 .DS_Store
 
+# code coverage
+.nyc_output
+
 # dev sandbox/notes
 dev.notes.js
+sandbox.*
+.npmignore

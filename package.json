@@ -1,19 +1,46 @@
 {
-  "name": "credential-faker",
-  "version": "1.0.0",
+  "name": "aire-faker",
+  "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2 --compilers --no-deprecation js:babel-register",
+    "test": "mocha",
+    "test-nyc": "nyc mocha --compilers --no-deprecation js:babel-register --timeout 10000",
+    "lint": "eslint ./ --fix",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },
-  "keywords": [],
+  "keywords": [
+    "aire-faker",
+    "ES6",
+    "Fake",
+    "Faker",
+    "Mock",
+    "Mock data"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "mersenne": "^0.0.4",
-    "nodemon": "^1.18.6"
-  }
+    "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.6",
+    "nyc": "^13.1.0"
+  },
+  "dependencies": {
+    "aire-checker": "^0.1.0",
+    "mersenne": "0.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laekettavong/aire-faker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/laekettavong/aire-faker/issues"
+  },
+  "homepage": "https://github.com/laekettavong/aire-faker#readme"
 }
